@@ -1,0 +1,29 @@
+.table {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+
+  .tableRow {
+    display: flex;
+    border-bottom: 1px solid #ffffff77;
+    &.header {
+      border-bottom: 2px solid white;
+    }
+    .tableCell {
+      flex: 1;
+      padding: 8px;
+
+      display: flex;
+      align-items: center;
+      &.name {
+        flex: 2;
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
