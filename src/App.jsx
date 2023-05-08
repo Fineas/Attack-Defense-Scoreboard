@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import "./App.scss";
 import ETH from './assets/ETH.png';
 import APT from './assets/APT.png';
-import mehoy from './assets/mehoy.png'
+// import mehoy from './assets/mehoy.png'
 import pp_dicegang from './assets/dicegang.png'
 import pp_zerotolerance from './assets/zerotolerance.png'
-// import pp_nyahello from './assets/nyahello.png'
+import pp_nyahello from './assets/nyahello.png'
 import pp_idek from './assets/idek.png'
 import pp_see from './assets/see.png'
 import pp_hexagon from './assets/hexagon.png'
@@ -117,7 +117,7 @@ let scoreboard = {
 const images = {
   team1: pp_dicegang,
   team2: pp_zerotolerance,
-  team3: mehoy,
+  team3: pp_nyahello,
   team4: pp_idek,
   team5: pp_see,
   team6: pp_hexagon,
