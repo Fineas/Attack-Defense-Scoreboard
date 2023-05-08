@@ -4,12 +4,20 @@ import "./App.scss";
 import ETH from './assets/ETH.png';
 import APT from './assets/APT.png';
 import mehoy from './assets/mehoy.png'
+import pp_dicegang from './assets/dicegang.png'
+import pp_zerotolerance from './assets/zerotolerance.png'
+// import pp_nyahello from './assets/nyahello.png'
+import pp_idek from './assets/idek.png'
+import pp_see from './assets/see.png'
+import pp_hexagon from './assets/hexagon.png'
+import pp_fibonhack from './assets/fibonhack.png'
+import pp_towerofhanoi from './assets/towerofhanoi.png'
 
 
 // this will come from the server eventually.
 let scoreboard = {
   team1: {
-    name: "Team 1",
+    name: "DiceGang",
     slug: "team1",
     ETH: {
       attack: 1,
@@ -21,7 +29,7 @@ let scoreboard = {
     },
   },
   team2: {
-    name: "Team 2",
+    name: "Zer0Tolerance",
     slug: "team2",
     ETH: {
       attack: 544,
@@ -33,7 +41,7 @@ let scoreboard = {
     },
   },
   team3: {
-    name: "Team 3",
+    name: "nyahello",
     slug: "team3",
     ETH: {
       attack: 51,
@@ -45,8 +53,8 @@ let scoreboard = {
     },
   },
     team4: {
-    name: "Team 1",
-    slug: "team1",
+    name: "idek",
+    slug: "team4",
     ETH: {
       attack: 1,
       defense: 2,
@@ -57,8 +65,8 @@ let scoreboard = {
     },
   },
   team5: {
-    name: "Team 2",
-    slug: "team2",
+    name: "Social Engineering Experts",
+    slug: "team5",
     ETH: {
       attack: 544,
       defense: 6,
@@ -69,8 +77,8 @@ let scoreboard = {
     },
   },
   team6: {
-    name: "Team 3",
-    slug: "team3",
+    name: "Hexagon",
+    slug: "team6",
     ETH: {
       attack: 51,
       defense: 61,
@@ -81,8 +89,8 @@ let scoreboard = {
     },
   },
   team10: {
-    name: "Team 1",
-    slug: "team1",
+    name: "fibonhack",
+    slug: "team7",
     ETH: {
       attack: 1,
       defense: 2,
@@ -93,8 +101,8 @@ let scoreboard = {
     },
   },
   team8: {
-    name: "Team 2",
-    slug: "team2",
+    name: "Tower of Hanoi",
+    slug: "team8",
     ETH: {
       attack: 544,
       defense: 6,
@@ -102,62 +110,19 @@ let scoreboard = {
     APT: {
       attack: 7,
       defense: 8,
-    },
-  },
-  team9: {
-    name: "Team 3",
-    slug: "team3",
-    ETH: {
-      attack: 51,
-      defense: 61,
-    },
-    APT: {
-      attack: 72,
-      defense: 38,
-    },
-  },
-  team12: {
-    name: "Team 1",
-    slug: "team1",
-    ETH: {
-      attack: 1,
-      defense: 2,
-    },
-    APT: {
-      attack: 3,
-      defense: 4,
-    },
-  },
-  team15: {
-    name: "Team 2",
-    slug: "team2",
-    ETH: {
-      attack: 544,
-      defense: 6,
-    },
-    APT: {
-      attack: 7,
-      defense: 8,
-    },
-  },
-  team66: {
-    name: "Team 3",
-    slug: "team3",
-    ETH: {
-      attack: 51,
-      defense: 61,
-    },
-    APT: {
-      attack: 72,
-      defense: 38,
     },
   },
 };
 
 const images = {
-  team1: mehoy,
-  team2: mehoy,
+  team1: pp_dicegang,
+  team2: pp_zerotolerance,
   team3: mehoy,
+  team4: pp_idek,
+  team5: pp_see,
+  team6: pp_hexagon,
+  team7: pp_fibonhack,
+  team8: pp_towerofhanoi,
 };
 
 
