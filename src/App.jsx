@@ -53,8 +53,8 @@ let scoreboard = {
     },
   },
   team4: {
-    name: "Team 1",
-    slug: "team1",
+    name: "idek",
+    slug: "team4",
     ETH: {
       attack: 1,
       defense: 2,
