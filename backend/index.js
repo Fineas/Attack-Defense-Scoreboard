@@ -22,7 +22,7 @@ let scoreboard = {
     },
     APT: {
       attack: 3,
-      defense:4,
+      defense: 4,
     },
   },
   team2: {
@@ -43,6 +43,7 @@ app.post("/addPoints", (req, res) => {
   scoreboard[team][chain].attack += attackPoints;
   scoreboard[team][chain].defense += defensePoints;
   io.emit("scoreboard", scoreboard);
+  res.send("OK");
 });
 
 app.post("/sudoSetPoints", (req, res) => {
@@ -50,6 +51,17 @@ app.post("/sudoSetPoints", (req, res) => {
   scoreboard[team][chain].attack = attackPoints;
   scoreboard[team][chain].defense = defensePoints;
   io.emit("scoreboard", scoreboard);
+  res.send("OK");
+});
+
+app.post("/import", (req, res) => {
+  scoreboard = req.body.scoreboard;
+  io.emit("scoreboard", scoreboard);
+  res.send("OK");
+});
+
+app.get("/export", (req, res) => {
+  res.json(scoreboard);
 });
 
 app.get("/", (req, res) => {
