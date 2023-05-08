@@ -11,6 +11,7 @@ body {
   animation: gradient 15s ease infinite;
   color: white;
   padding: 5vh 5vw;
+  overflow-x: hidden;
 }
 
 @keyframes gradient {

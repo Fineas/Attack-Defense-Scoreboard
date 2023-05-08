@@ -44,6 +44,114 @@ let scoreboard = {
       defense: 38,
     },
   },
+    team4: {
+    name: "Team 1",
+    slug: "team1",
+    ETH: {
+      attack: 1,
+      defense: 2,
+    },
+    APT: {
+      attack: 3,
+      defense: 4,
+    },
+  },
+  team5: {
+    name: "Team 2",
+    slug: "team2",
+    ETH: {
+      attack: 544,
+      defense: 6,
+    },
+    APT: {
+      attack: 7,
+      defense: 8,
+    },
+  },
+  team6: {
+    name: "Team 3",
+    slug: "team3",
+    ETH: {
+      attack: 51,
+      defense: 61,
+    },
+    APT: {
+      attack: 72,
+      defense: 38,
+    },
+  },
+  team10: {
+    name: "Team 1",
+    slug: "team1",
+    ETH: {
+      attack: 1,
+      defense: 2,
+    },
+    APT: {
+      attack: 3,
+      defense: 4,
+    },
+  },
+  team8: {
+    name: "Team 2",
+    slug: "team2",
+    ETH: {
+      attack: 544,
+      defense: 6,
+    },
+    APT: {
+      attack: 7,
+      defense: 8,
+    },
+  },
+  team9: {
+    name: "Team 3",
+    slug: "team3",
+    ETH: {
+      attack: 51,
+      defense: 61,
+    },
+    APT: {
+      attack: 72,
+      defense: 38,
+    },
+  },
+  team12: {
+    name: "Team 1",
+    slug: "team1",
+    ETH: {
+      attack: 1,
+      defense: 2,
+    },
+    APT: {
+      attack: 3,
+      defense: 4,
+    },
+  },
+  team15: {
+    name: "Team 2",
+    slug: "team2",
+    ETH: {
+      attack: 544,
+      defense: 6,
+    },
+    APT: {
+      attack: 7,
+      defense: 8,
+    },
+  },
+  team66: {
+    name: "Team 3",
+    slug: "team3",
+    ETH: {
+      attack: 51,
+      defense: 61,
+    },
+    APT: {
+      attack: 72,
+      defense: 38,
+    },
+  },
 };
 
 const images = {
@@ -51,6 +159,8 @@ const images = {
   team2: mehoy,
   team3: mehoy,
 };
+
+
 
 export default function App() {
   //const [isConnected, setIsConnected] = useState(socket.connected);
@@ -136,6 +246,10 @@ export default function App() {
 
 
       </div>
+
+      <footer>
+        fashioned by <b><a href="http://www.mihaic.me" target="_blank">www.mihaic.me</a></b>
+      </footer>
     </div>
   );
 }
