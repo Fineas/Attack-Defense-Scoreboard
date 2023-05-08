@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 //import { socket } from "./socket";
 import "./App.scss";
+import ETH from './assets/ETH.png';
+import APT from './assets/APT.png';
+import mehoy from './assets/mehoy.png'
+
 
 // this will come from the server eventually.
 let scoreboard = {
@@ -43,9 +47,9 @@ let scoreboard = {
 };
 
 const images = {
-  team1: "https://i.imgur.com/1QZqZ1U.png",
-  team2: "https://i.imgur.com/1QZqZ1U.png",
-  team3: "https://i.imgur.com/1QZqZ1U.png",
+  team1: mehoy,
+  team2: mehoy,
+  team3: mehoy,
 };
 
 export default function App() {
@@ -79,14 +83,23 @@ export default function App() {
   }, []);
   */
 
+
+
   return (
     <div className="App">
       <div className="title">HackTM A&D Scoreboard</div>
       <div className="chainSwitcher">
-        <button onClick={() => setChain("ETH")}>ETH</button>
-        <button onClick={() => setChain("APT")}>APT</button>
+        <img src={ETH} className={chain==='ETH' ? 'active' : ''}/>
+        <img src={APT} className={chain==='APT' ? 'active' : ''}/>
+
+        <button onClick={() => setChain("ETH")} className={chain==='ETH' ? 'active' : ''}>ETH</button>
+        <button onClick={() => setChain("APT")} className={chain==='APT' ? 'active' : ''}>APT</button>
       </div>
+
+
       <div className="table">
+
+
         <div className="tableRow header">
           <div className="tableCell">Rank</div>
           <div className="tableCell name">Team</div>
@@ -94,6 +107,8 @@ export default function App() {
           <div className="tableCell">Defense</div>
           <div className="tableCell">Total</div>
         </div>
+
+
         <div className="tableBody">
           {Object.values(scoreboard)
             .map((team) => {
@@ -102,7 +117,7 @@ export default function App() {
                 score: team[chain].attack + team[chain].defense,
               };
             })
-            .sort((a, b) => b.score - a.score)
+            .sort((a, b) =>  b.score -a.score)
             .map((value, index) => {
               return (
                 <div className="tableRow">
@@ -118,6 +133,8 @@ export default function App() {
               );
             })}
         </div>
+
+
       </div>
     </div>
   );

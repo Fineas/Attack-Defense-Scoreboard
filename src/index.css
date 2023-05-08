@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #151327;
+  background: linear-gradient(-45deg, #421317, #153541, #3a0237);
+  background-size: 400% 400%;
+  height: 100vh;
+  animation: gradient 15s ease infinite;
   color: white;
+  padding: 5vh 5vw;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
