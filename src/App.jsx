@@ -44,7 +44,7 @@ let scoreboard = {
       defense: 38,
     },
   },
-    team4: {
+  team4: {
     name: "Team 1",
     slug: "team1",
     ETH: {
@@ -197,13 +197,25 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="title">HackTM A&D Scoreboard</div>
-      <div className="chainSwitcher">
-        <img src={ETH} className={chain==='ETH' ? 'active' : ''}/>
-        <img src={APT} className={chain==='APT' ? 'active' : ''}/>
+      <div className="topBar">
 
-        <button onClick={() => setChain("ETH")} className={chain==='ETH' ? 'active' : ''}>ETH</button>
-        <button onClick={() => setChain("APT")} className={chain==='APT' ? 'active' : ''}>APT</button>
+        <div className="chainButtonsContainer">
+          <button onClick={() => setChain("ETH")} className={chain === 'ETH' ? 'active' : ''}>ETH</button>
+          <button onClick={() => setChain("APT")} className={chain === 'APT' ? 'active' : ''}>APT</button>
+        </div>
+
+        <div className="imageContainer">
+          <img src={ETH} className={chain === 'ETH' ? 'active' : ''} />
+          <img src={APT} className={chain === 'APT' ? 'active' : ''} />
+        </div>
+
+        <div className="textContainer">
+
+          <div className="title">HackTM A&D Scoreboard</div>
+          <div className='description'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur molestias sapiente assumenda voluptatum delectus, eligendi iste aut necessitatibus dolorum, placeat tempora quae voluptas nam ipsa pariatur veritatis. Accusamus suscipit adipisci voluptatibus qui. Error ratione quidem aliquid voluptatibus, laborum beatae odio quasi? Facilis deserunt quod minus ullam nostrum blanditiis nulla quos.
+          </div>
+        </div>
       </div>
 
 
@@ -227,7 +239,7 @@ export default function App() {
                 score: team[chain].attack + team[chain].defense,
               };
             })
-            .sort((a, b) =>  b.score -a.score)
+            .sort((a, b) => b.score - a.score)
             .map((value, index) => {
               return (
                 <div className="tableRow">
