@@ -14,22 +14,22 @@ import pp_fibonhack from "./assets/fibonhack.png";
 import pp_towerofhanoi from "./assets/towerofhanoi.png";
 
 const images = {
-  team1: pp_dicegang,
-  team2: pp_zerotolerance,
-  team3: pp_nyahello,
-  team4: pp_idek,
-  team5: pp_see,
-  team6: pp_hexagon,
-  team7: pp_fibonhack,
-  team8: pp_towerofhanoi,
+  dice_gang: pp_dicegang,
+  zero_tolerance: pp_zerotolerance,
+  nyahello: pp_nyahello,
+  idek: pp_idek,
+  social_engineering_experts: pp_see,
+  hexagon: pp_hexagon,
+  fibonhack: pp_fibonhack,
+  tower_of_hanoi: pp_towerofhanoi,
 };
 
 export default function App() {
   //const [isConnected, setIsConnected] = useState(socket.connected);
   const [scoreboard, setScoreboard] = useState({
-    team1: {
+    dice_gang: {
       name: "DiceGang",
-      slug: "team1",
+      slug: "dice_gang",
       ETH: {
         attack: 0,
         defense: 0,
@@ -39,9 +39,9 @@ export default function App() {
         defense: 0,
       },
     },
-    team2: {
+    zero_tolerance: {
       name: "Zer0Tolerance",
-      slug: "team2",
+      slug: "zero_tolerance",
       ETH: {
         attack: 0,
         defense: 0,
@@ -51,9 +51,9 @@ export default function App() {
         defense: 0,
       },
     },
-    team3: {
+    nyahello: {
       name: "nyahello",
-      slug: "team3",
+      slug: "nyahello",
       ETH: {
         attack: 0,
         defense: 0,
@@ -63,9 +63,9 @@ export default function App() {
         defense: 0,
       },
     },
-    team4: {
+    idek: {
       name: "idek",
-      slug: "team4",
+      slug: "idek",
       ETH: {
         attack: 0,
         defense: 0,
@@ -75,9 +75,9 @@ export default function App() {
         defense: 0,
       },
     },
-    team5: {
+    social_engineering_experts: {
       name: "Social Engineering Experts",
-      slug: "team5",
+      slug: "social_engineering_experts",
       ETH: {
         attack: 0,
         defense: 0,
@@ -87,9 +87,9 @@ export default function App() {
         defense: 0,
       },
     },
-    team6: {
+    hexagon: {
       name: "Hexagon",
-      slug: "team6",
+      slug: "hexagon",
       ETH: {
         attack: 0,
         defense: 0,
@@ -99,9 +99,9 @@ export default function App() {
         defense: 0,
       },
     },
-    team10: {
+    fibonhack: {
       name: "fibonhack",
-      slug: "team7",
+      slug: "fibonhack",
       ETH: {
         attack: 0,
         defense: 0,
@@ -111,9 +111,9 @@ export default function App() {
         defense: 0,
       },
     },
-    team8: {
+    tower_of_hanoi: {
       name: "Tower of Hanoi",
-      slug: "team8",
+      slug: "tower_of_hanoi",
       ETH: {
         attack: 0,
         defense: 0,

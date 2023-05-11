@@ -16,9 +16,9 @@ const io = require("socket.io")(server, {
 });
 
 let scoreboard = {
-  team1: {
+  dice_gang: {
     name: "DiceGang",
-    slug: "team1",
+    slug: "dice_gang",
     ETH: {
       attack: 0,
       defense: 0,
@@ -28,9 +28,9 @@ let scoreboard = {
       defense: 0,
     },
   },
-  team2: {
+  zero_tolerance: {
     name: "Zer0Tolerance",
-    slug: "team2",
+    slug: "zero_tolerance",
     ETH: {
       attack: 0,
       defense: 0,
@@ -40,9 +40,9 @@ let scoreboard = {
       defense: 0,
     },
   },
-  team3: {
+  nyahello: {
     name: "nyahello",
-    slug: "team3",
+    slug: "nyahello",
     ETH: {
       attack: 0,
       defense: 0,
@@ -52,9 +52,9 @@ let scoreboard = {
       defense: 0,
     },
   },
-  team4: {
+  idek: {
     name: "idek",
-    slug: "team4",
+    slug: "idek",
     ETH: {
       attack: 0,
       defense: 0,
@@ -64,9 +64,9 @@ let scoreboard = {
       defense: 0,
     },
   },
-  team5: {
+  social_engineering_experts: {
     name: "Social Engineering Experts",
-    slug: "team5",
+    slug: "social_engineering_experts",
     ETH: {
       attack: 0,
       defense: 0,
@@ -76,9 +76,9 @@ let scoreboard = {
       defense: 0,
     },
   },
-  team6: {
+  hexagon: {
     name: "Hexagon",
-    slug: "team6",
+    slug: "hexagon",
     ETH: {
       attack: 0,
       defense: 0,
@@ -88,9 +88,9 @@ let scoreboard = {
       defense: 0,
     },
   },
-  team10: {
+  fibonhack: {
     name: "fibonhack",
-    slug: "team7",
+    slug: "fibonhack",
     ETH: {
       attack: 0,
       defense: 0,
@@ -100,9 +100,9 @@ let scoreboard = {
       defense: 0,
     },
   },
-  team8: {
+  tower_of_hanoi: {
     name: "Tower of Hanoi",
-    slug: "team8",
+    slug: "tower_of_hanoi",
     ETH: {
       attack: 0,
       defense: 0,
