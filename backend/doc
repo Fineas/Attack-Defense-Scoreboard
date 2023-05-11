@@ -1,0 +1,50 @@
+All endpoints expect JSON data.
+
+Common parameters:
+chain:
+ETH|APT
+
+fixStatus:
+valid | invalid | paused | {blank}
+
+Endpoints:
+
+/addPoints
+Add (or subtract) points for a given team.
+Params:
+    secret
+    team
+    chain
+    attackPoints
+    defensePoints
+    fixStatus
+
+/sudoSetPoints
+Sets points for a given team
+Params:
+    secret
+    team
+    chain
+    attackPoints
+    defensePoints
+    fixStatus
+
+/export
+Exports the entire scoreboard as json
+
+/import
+Imports the scoreboard from json
+Params:
+    secret
+    scoreboard
+
+
+
+
+ToDo:
+Team IDs
+Secret
+Deploy FE
+Deploy BE
+Test import / export
+Automatically backup every x seconds.

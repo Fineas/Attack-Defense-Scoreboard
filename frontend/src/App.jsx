@@ -26,7 +26,104 @@ const images = {
 
 export default function App() {
   //const [isConnected, setIsConnected] = useState(socket.connected);
-  const [scoreboard, setScoreboard] = useState([]);
+  const [scoreboard, setScoreboard] = useState({
+    team1: {
+      name: "DiceGang",
+      slug: "team1",
+      ETH: {
+        attack: 0,
+        defense: 0,
+      },
+      APT: {
+        attack: 0,
+        defense: 0,
+      },
+    },
+    team2: {
+      name: "Zer0Tolerance",
+      slug: "team2",
+      ETH: {
+        attack: 0,
+        defense: 0,
+      },
+      APT: {
+        attack: 0,
+        defense: 0,
+      },
+    },
+    team3: {
+      name: "nyahello",
+      slug: "team3",
+      ETH: {
+        attack: 0,
+        defense: 0,
+      },
+      APT: {
+        attack: 0,
+        defense: 0,
+      },
+    },
+    team4: {
+      name: "idek",
+      slug: "team4",
+      ETH: {
+        attack: 0,
+        defense: 0,
+      },
+      APT: {
+        attack: 0,
+        defense: 0,
+      },
+    },
+    team5: {
+      name: "Social Engineering Experts",
+      slug: "team5",
+      ETH: {
+        attack: 0,
+        defense: 0,
+      },
+      APT: {
+        attack: 0,
+        defense: 0,
+      },
+    },
+    team6: {
+      name: "Hexagon",
+      slug: "team6",
+      ETH: {
+        attack: 0,
+        defense: 0,
+      },
+      APT: {
+        attack: 0,
+        defense: 0,
+      },
+    },
+    team10: {
+      name: "fibonhack",
+      slug: "team7",
+      ETH: {
+        attack: 0,
+        defense: 0,
+      },
+      APT: {
+        attack: 0,
+        defense: 0,
+      },
+    },
+    team8: {
+      name: "Tower of Hanoi",
+      slug: "team8",
+      ETH: {
+        attack: 0,
+        defense: 0,
+      },
+      APT: {
+        attack: 0,
+        defense: 0,
+      },
+    },
+  });
   const [chain, setChain] = useState("ETH");
 
   useEffect(() => {
@@ -73,8 +170,16 @@ export default function App() {
         </div>
 
         <div className="imageContainer">
-          <img alt="coin img" src={ETH} className={chain === "ETH" ? "active" : ""} />
-          <img alt="coin img" src={APT} className={chain === "APT" ? "active" : ""} />
+          <img
+            alt="coin img"
+            src={ETH}
+            className={chain === "ETH" ? "active" : ""}
+          />
+          <img
+            alt="coin img"
+            src={APT}
+            className={chain === "APT" ? "active" : ""}
+          />
         </div>
 
         <div className="textContainer">
