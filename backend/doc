@@ -1,11 +1,23 @@
 All endpoints expect JSON data.
 
+
+
 Common parameters:
 chain:
 ETH|APT
 
 fixStatus:
 valid | invalid | paused | {blank}
+
+team:
+"dice_gang"
+"zero_tolerance"
+"nyahello"
+"idek"
+"social_engineering_experts"
+"hexagon"
+"fibonhack"
+"tower_of_hanoi"
 
 Endpoints:
 
@@ -43,9 +55,6 @@ Params:
 
 ToDo:
 Texts
-Team IDs
 Secret
 Deploy FE
 Deploy BE
-Test import / export
-Automatically backup every x seconds.
