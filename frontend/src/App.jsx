@@ -1,118 +1,17 @@
 import React, { useState, useEffect } from "react";
-//import { socket } from "./socket";
+import { socket } from "./socket";
 import "./App.scss";
-import ETH from './assets/ETH.png';
-import APT from './assets/APT.png';
+import ETH from "./assets/ETH.png";
+import APT from "./assets/APT.png";
 // import mehoy from './assets/mehoy.png'
-import pp_dicegang from './assets/dicegang.png'
-import pp_zerotolerance from './assets/zerotolerance.png'
-import pp_nyahello from './assets/nyahello.png'
-import pp_idek from './assets/idek.png'
-import pp_see from './assets/see.png'
-import pp_hexagon from './assets/hexagon.png'
-import pp_fibonhack from './assets/fibonhack.png'
-import pp_towerofhanoi from './assets/towerofhanoi.png'
-
-
-// this will come from the server eventually.
-let scoreboard = {
-  team1: {
-    name: "DiceGang",
-    slug: "team1",
-    ETH: {
-      attack: 1,
-      defense: 2,
-    },
-    APT: {
-      attack: 3,
-      defense: 4,
-    },
-  },
-  team2: {
-    name: "Zer0Tolerance",
-    slug: "team2",
-    ETH: {
-      attack: 544,
-      defense: 6,
-    },
-    APT: {
-      attack: 7,
-      defense: 8,
-    },
-  },
-  team3: {
-    name: "nyahello",
-    slug: "team3",
-    ETH: {
-      attack: 51,
-      defense: 61,
-    },
-    APT: {
-      attack: 72,
-      defense: 38,
-    },
-  },
-  team4: {
-    name: "idek",
-    slug: "team4",
-    ETH: {
-      attack: 1,
-      defense: 2,
-    },
-    APT: {
-      attack: 3,
-      defense: 4,
-    },
-  },
-  team5: {
-    name: "Social Engineering Experts",
-    slug: "team5",
-    ETH: {
-      attack: 544,
-      defense: 6,
-    },
-    APT: {
-      attack: 7,
-      defense: 8,
-    },
-  },
-  team6: {
-    name: "Hexagon",
-    slug: "team6",
-    ETH: {
-      attack: 51,
-      defense: 61,
-    },
-    APT: {
-      attack: 72,
-      defense: 38,
-    },
-  },
-  team10: {
-    name: "fibonhack",
-    slug: "team7",
-    ETH: {
-      attack: 1,
-      defense: 2,
-    },
-    APT: {
-      attack: 3,
-      defense: 4,
-    },
-  },
-  team8: {
-    name: "Tower of Hanoi",
-    slug: "team8",
-    ETH: {
-      attack: 544,
-      defense: 6,
-    },
-    APT: {
-      attack: 7,
-      defense: 8,
-    },
-  },
-};
+import pp_dicegang from "./assets/dicegang.png";
+import pp_zerotolerance from "./assets/zerotolerance.png";
+import pp_nyahello from "./assets/nyahello.png";
+import pp_idek from "./assets/idek.png";
+import pp_see from "./assets/see.png";
+import pp_hexagon from "./assets/hexagon.png";
+import pp_fibonhack from "./assets/fibonhack.png";
+import pp_towerofhanoi from "./assets/towerofhanoi.png";
 
 const images = {
   team1: pp_dicegang,
@@ -125,20 +24,18 @@ const images = {
   team8: pp_towerofhanoi,
 };
 
-
-
 export default function App() {
   //const [isConnected, setIsConnected] = useState(socket.connected);
-  //const [scoreboard, setScoreboard] = useState([]);
+  const [scoreboard, setScoreboard] = useState([]);
   const [chain, setChain] = useState("ETH");
-  /*
+
   useEffect(() => {
     function onConnect() {
-      setIsConnected(true);
+      //setIsConnected(true);
     }
 
     function onDisconnect() {
-      setIsConnected(false);
+      //setIsConnected(false);
     }
 
     function onScoreboard(value) {
@@ -156,45 +53,53 @@ export default function App() {
       socket.off("foo", onScoreboard);
     };
   }, []);
-  */
-
-
 
   return (
     <div className="App">
       <div className="topBar">
-
         <div className="chainButtonsContainer">
-          <button onClick={() => setChain("ETH")} className={chain === 'ETH' ? 'active' : ''}>ETH</button>
-          <button onClick={() => setChain("APT")} className={chain === 'APT' ? 'active' : ''}>APT</button>
+          <button
+            onClick={() => setChain("ETH")}
+            className={chain === "ETH" ? "active" : ""}
+          >
+            ETH
+          </button>
+          <button
+            onClick={() => setChain("APT")}
+            className={chain === "APT" ? "active" : ""}
+          >
+            APT
+          </button>
         </div>
 
         <div className="imageContainer">
-          <img src={ETH} className={chain === 'ETH' ? 'active' : ''} />
-          <img src={APT} className={chain === 'APT' ? 'active' : ''} />
+          <img alt="coin img" src={ETH} className={chain === "ETH" ? "active" : ""} />
+          <img alt="coin img" src={APT} className={chain === "APT" ? "active" : ""} />
         </div>
 
         <div className="textContainer">
-
           <div className="title">HackTM A&D Scoreboard</div>
-          <div className='description'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur molestias sapiente assumenda voluptatum delectus, eligendi iste aut necessitatibus dolorum, placeat tempora quae voluptas nam ipsa pariatur veritatis. Accusamus suscipit adipisci voluptatibus qui. Error ratione quidem aliquid voluptatibus, laborum beatae odio quasi? Facilis deserunt quod minus ullam nostrum blanditiis nulla quos.
+          <div className="description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Consequatur molestias sapiente assumenda voluptatum delectus,
+            eligendi iste aut necessitatibus dolorum, placeat tempora quae
+            voluptas nam ipsa pariatur veritatis. Accusamus suscipit adipisci
+            voluptatibus qui. Error ratione quidem aliquid voluptatibus, laborum
+            beatae odio quasi? Facilis deserunt quod minus ullam nostrum
+            blanditiis nulla quos.
           </div>
         </div>
       </div>
 
-
       <div className="table">
-
-
         <div className="tableRow header">
           <div className="tableCell">Rank</div>
           <div className="tableCell name">Team</div>
           <div className="tableCell">Attack</div>
           <div className="tableCell">Defense</div>
           <div className="tableCell">Total</div>
+          <div className="tableCell small"></div>
         </div>
-
 
         <div className="tableBody">
           {Object.values(scoreboard)
@@ -210,22 +115,31 @@ export default function App() {
                 <div className="tableRow">
                   <div className="tableCell">{index + 1}</div>
                   <div className="tableCell name">
-                    <img src={images[value.slug]} />
+                    <img alt={value.name} src={images[value.slug]} />
                     {value.name}
                   </div>
                   <div className="tableCell">{value[chain].attack}</div>
                   <div className="tableCell">{value[chain].defense}</div>
                   <div className="tableCell">{value.score}</div>
+
+                  <div className="tableCell small">
+                    <div
+                      className={"fixStatus " + value[chain].fixStatus}
+                    ></div>
+                  </div>
                 </div>
               );
             })}
         </div>
-
-
       </div>
 
       <footer>
-        fashioned by <b><a href="http://www.mihaic.me" target="_blank">www.mihaic.me</a></b>
+        fashioned by{" "}
+        <b>
+          <a href="http://www.mihaic.me" target="_blank" rel="noreferrer">
+            www.mihaic.me
+          </a>
+        </b>
       </footer>
     </div>
   );
