@@ -4,7 +4,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 const http = require("http");
-const server = http.createServer(app);
+const fs = require("fs");
+const options = {
+  key: fs.readFileSync("/etc/ssl/private/cf.pem"),
+  cert: fs.readFileSync("/etc/ssl/certs/cf.crt"),
+};
+
+const server = http.createServer(options, app);
 
 const secret = require("./secret");
 
