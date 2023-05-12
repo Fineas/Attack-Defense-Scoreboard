@@ -183,15 +183,15 @@ export default function App() {
         </div>
 
         <div className="textContainer">
-          <div className="title">HackTM A&D Scoreboard</div>
+          <div className="title">
+            {chain === "ETH" && "Web3 Casino"}
+            {chain === "APT" && "OtterBank"}
+          </div>
           <div className="description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Consequatur molestias sapiente assumenda voluptatum delectus,
-            eligendi iste aut necessitatibus dolorum, placeat tempora quae
-            voluptas nam ipsa pariatur veritatis. Accusamus suscipit adipisci
-            voluptatibus qui. Error ratione quidem aliquid voluptatibus, laborum
-            beatae odio quasi? Facilis deserunt quod minus ullam nostrum
-            blanditiis nulla quos.
+            {chain === "ETH" &&
+              "Attack & Defence on an EVM blockchain. Obtain attack points by winning CHIP tokens from other team’s casinos and gain defence points from patching bugs and protecting the CHIP tokens in your own casino."}
+            {chain === "APT" &&
+              "Welcome to the official decentralized OtterBank running on the Aptos Blockchain. Protect the house at all cost and you will be rewarded defense points. Bring profit to the house and you will be awarded attack points. Keep in mind that all you actions must stay within the rules or you will be punished. <HKTM, OSEC>"}
           </div>
         </div>
       </div>
@@ -203,7 +203,7 @@ export default function App() {
           <div className="tableCell">Attack</div>
           <div className="tableCell">Defense</div>
           <div className="tableCell">Total</div>
-          <div className="tableCell small"></div>
+          <div className="tableCell">Status</div>
         </div>
 
         <div className="tableBody">
@@ -227,7 +227,7 @@ export default function App() {
                   <div className="tableCell">{value[chain].defense}</div>
                   <div className="tableCell">{value.score}</div>
 
-                  <div className="tableCell small">
+                  <div className="tableCell">
                     <div
                       className={"fixStatus " + value[chain].fixStatus}
                     ></div>

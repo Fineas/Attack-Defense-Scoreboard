@@ -160,7 +160,7 @@
 
       display: flex;
       align-items: center;
-      &.small {
+      &:last-child {
         width: 20px;
         max-width: 20px;
         text-align: right;
