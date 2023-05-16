@@ -1,6 +1,8 @@
 # Attack-Defense-Scoreboard
 A simple scoreboard to display the ranking of two services running on two separate chains: ETH &amp; APT
 
+![](assets/ETH_scoreboard.jpeg)
+
 ## Docs
 
 > All endpoints expect JSON data.
